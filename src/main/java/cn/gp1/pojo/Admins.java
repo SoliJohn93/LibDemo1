@@ -9,8 +9,6 @@ public class Admins {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column
-	private Integer aid;
-	@Column
 	private String aname;
 	@Column
 	private String apwd;
@@ -21,19 +19,14 @@ public class Admins {
 	public Admins() {
 		super();
 	}
-	public Admins(Integer aid, String aname, String apwd, int state) {
+	public Admins( String aname, String apwd, int state) {
 		super();
-		this.aid = aid;
+	
 		this.aname = aname;
 		this.apwd = apwd;
 		this.state = state;
 	}
-	public Integer getAid() {
-		return aid;
-	}
-	public void setAid(Integer aid) {
-		this.aid = aid;
-	}
+
 	public String getAname() {
 		return aname;
 	}
@@ -54,7 +47,7 @@ public class Admins {
 	}
 	@Override
 	public String toString() {
-		return "Admins [aid=" + aid + ", aname=" + aname + ", apwd=" + apwd + ", state=" + state + "]";
+		return "Admins [aname=" + aname + ", apwd=" + apwd + ", state=" + state + "]";
 	}
 	
 	
