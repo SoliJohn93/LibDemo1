@@ -6,9 +6,9 @@ spring:
   datasource:
     driver-class-name: com.jdbc.mysql.Driver
     url: jdbc:mysql://localhost:3306/lib
-    username: 
-    password:
-    type: 
+    username: root
+    password: ok
+    type: com.alibaba.druid.pool.DruidDataSource
   jpa:
     hibernate:
       ddl-auto: update
