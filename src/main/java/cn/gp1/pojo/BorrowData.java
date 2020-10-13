@@ -22,12 +22,10 @@ public class BorrowData {
 		@Column
 		private Date ddate;
 		
-		@OneToOne
-		@JoinColumn(name="uname")
+		/*@OneToOne(mappedBy="uname")
 		private Users users;
-		@OneToOne
-		@JoinColumn(name="bid")
-		private Books books;
+		@OneToOne(mappedBy="bid")
+		private Books books;*/
 		public Integer getDid() {
 			return did;
 		}

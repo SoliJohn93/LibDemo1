@@ -23,8 +23,9 @@ public class Books {
 	@Column
 	private int borrowed;
 	
-	@OneToOne(mappedBy="bid")
-	private BorrowData bd;
+	/*@OneToOne
+	@JoinColumn(name="bid")
+	private BorrowData bd;*/
 
 
 	public Books(Integer bid, String bname, String auther, String phouse, int borrowed) {

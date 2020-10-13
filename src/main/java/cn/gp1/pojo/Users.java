@@ -21,8 +21,9 @@ public class Users {
 		private int gender;
 		
 		
-		@OneToOne(mappedBy="uname")
-		private BorrowData bd;
+	/*	@OneToOne
+		@JoinColumn(name="uname")
+		private BorrowData bd;*/
 		public Users() {
 			super();
 		}
