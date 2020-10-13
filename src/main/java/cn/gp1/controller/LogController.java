@@ -26,6 +26,7 @@ public class LogController {
 			Users u=this.lservice.getById(id);
 			if(u.getUpwd().equals(pwd)){
 				return "main";
+				
 			}
 			return "login";
 		}
