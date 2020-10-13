@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
@@ -22,14 +22,14 @@
         图书管理系统
     </div>    
     <div class="mui-content-padded" style="margin: 5px;">    
-      <form class="mui-input-group">    
+      <form class="mui-input-group" th:action="@{/dologin}">    
         <div class="mui-input-row">    
             <label>用户名：</label>    
-            <input type="text" id="username" placeholder="请输入用户名">    
+            <input type="text" id="username" name="id" placeholder="请输入用户名"/>    
         </div>    
         <div class="mui-input-row">    
            <label>登录密码：</label>    
-            <input type="password" id="userpassword" placeholder="请输入密码">    
+            <input type="password" id="userpassword" name="pwd" placeholder="请输入密码"/>    
         </div>    
      </form>    
     </div>    

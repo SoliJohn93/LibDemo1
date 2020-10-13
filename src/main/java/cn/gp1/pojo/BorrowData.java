@@ -14,9 +14,6 @@ public class BorrowData {
 		private Integer did;
 		
 		@Column
-		private Integer uid;
-		
-		@Column
 		private Integer bid;
 		@Column
 		private String uname;
@@ -26,7 +23,7 @@ public class BorrowData {
 		private Date ddate;
 		
 		@OneToOne
-		@JoinColumn(name="uid")
+		@JoinColumn(name="uname")
 		private Users users;
 		@OneToOne
 		@JoinColumn(name="bid")
@@ -39,13 +36,7 @@ public class BorrowData {
 			this.did = did;
 		}
 
-		public Integer getUid() {
-			return uid;
-		}
 
-		public void setUid(Integer uid) {
-			this.uid = uid;
-		}
 
 		public Integer getBid() {
 			return bid;
@@ -83,10 +74,9 @@ public class BorrowData {
 			super();
 		}
 
-		public BorrowData(Integer did, Integer uid, Integer bid, String uname, String bname, Date ddate) {
+		public BorrowData(Integer did,  Integer bid, String uname, String bname, Date ddate) {
 			super();
 			this.did = did;
-			this.uid = uid;
 			this.bid = bid;
 			this.uname = uname;
 			this.bname = bname;
@@ -95,7 +85,7 @@ public class BorrowData {
 
 		@Override
 		public String toString() {
-			return "BorrowData [did=" + did + ", uid=" + uid + ", bid=" + bid + ", uname=" + uname + ", bname=" + bname
+			return "BorrowData [did=" + did + ", bid=" + bid + ", uname=" + uname + ", bname=" + bname
 					+ ", ddate=" + ddate + "]";
 		}
 		

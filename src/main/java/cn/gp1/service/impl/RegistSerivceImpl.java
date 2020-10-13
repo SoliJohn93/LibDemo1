@@ -40,7 +40,7 @@ public class RegistSerivceImpl implements RegistService {
 	}
 
 	@Override
-	public void deleteUserById(Integer id) {
+	public void deleteUserById(String id) {
 		// TODO Auto-generated method stub
 		this.uRepository.deleteById(id);
 	}

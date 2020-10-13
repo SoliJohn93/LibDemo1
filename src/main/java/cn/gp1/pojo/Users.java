@@ -8,8 +8,6 @@ public class Users {
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column
-		private Integer uid;
-		@Column
 		private String uname;
 		@Column
 		private String upwd;
@@ -23,15 +21,14 @@ public class Users {
 		private int gender;
 		
 		
-		@OneToOne(mappedBy="uid")
+		@OneToOne(mappedBy="uname")
 		private BorrowData bd;
 		public Users() {
 			super();
 		}
 
-		public Users(Integer uid, String uname, String upwd, int state, String email, int age, int gender) {
+		public Users(String uname, String upwd, int state, String email, int age, int gender) {
 			super();
-			this.uid = uid;
 			this.uname = uname;
 			this.upwd = upwd;
 			this.state = state;
@@ -40,13 +37,7 @@ public class Users {
 			this.gender = gender;
 		}
 
-		public Integer getUid() {
-			return uid;
-		}
-
-		public void setUid(Integer uid) {
-			this.uid = uid;
-		}
+		
 
 		public String getUname() {
 			return uname;
@@ -98,7 +89,7 @@ public class Users {
 
 		@Override
 		public String toString() {
-			return "Users [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + ", state=" + state + ", email=" + email
+			return "Users [uname=" + uname + ", upwd=" + upwd + ", state=" + state + ", email=" + email
 					+ ", age=" + age + ", gender=" + gender + "]";
 		}
 		

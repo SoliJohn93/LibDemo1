@@ -10,5 +10,6 @@ public interface RegistService {
 	Users addUser(Users u);
 	List<Books> findAllBook();
 	List<Users> findAllUser();
-	void deleteUserById(Integer id);
+	
+	void deleteUserById(String id);
 }
