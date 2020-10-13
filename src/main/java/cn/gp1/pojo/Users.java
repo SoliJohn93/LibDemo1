@@ -1,6 +1,8 @@
 package cn.gp1.pojo;
 
 import javax.persistence.*;
+
+import org.springframework.lang.Nullable;
 @Entity
 @Table(name="b_user")
 public class Users {
@@ -12,23 +14,25 @@ public class Users {
 		@Column
 		private String upwd;
 		@Column
-		private int state;
+		private int state=0;
 		@Column
+		@Nullable
 		private String email;
 		@Column
-		private int age;
+		@Nullable
+		private Integer age;
 		@Column
-		private int gender;
+		private int gender=0;
 		
 		
-	/*	@OneToOne
+		@OneToOne
 		@JoinColumn(name="uname")
-		private BorrowData bd;*/
+		private BorrowData bd;
 		public Users() {
 			super();
 		}
 
-		public Users(String uname, String upwd, int state, String email, int age, int gender) {
+		public Users(String uname, String upwd, int state, String email, Integer age, int gender) {
 			super();
 			this.uname = uname;
 			this.upwd = upwd;
@@ -76,7 +80,7 @@ public class Users {
 			return age;
 		}
 
-		public void setAge(int age) {
+		public void setAge(Integer age) {
 			this.age = age;
 		}
 

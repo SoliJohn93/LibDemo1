@@ -1,55 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="utf-8" />
+<html>
+	<head xmlns:th="http://www.thymeleaf.org">
+		<meta charset="UTF-8">
 		<title></title>
 	</head>
 	<body>
-		<html>  
-  <head>  
-    <meta charset="utf-8">  
-    <title>图书管理系统</title>  
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">    
-    <meta name="apple-mobile-web-app-capable" content="yes">    
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">    
-  
-   <!--  <link rel="stylesheet" href="css/mui.min.css">    
-    <script src="js/mui.min.js"></script>    
-    <script src="js/app.js"></script>   -->
-  </head>  
-  <body>  
-    <div class="mui-bar mui-bar-tab" style="height:25px;line-height:25px;font-size:30px;text-align:center;">    
-        图书管理系统
-    </div>    
-    <div class="mui-content-padded" style="margin: 5px;">    
-      <form class="mui-input-group" th:action="@{/dologin}">    
-        <div class="mui-input-row">    
-            <label>用户名：</label>    
-            <input type="text" id="username" name="id" placeholder="请输入用户名"/>    
-        </div>    
-        <div class="mui-input-row">    
-           <label>登录密码：</label>    
-            <input type="password" id="userpassword" name="pwd" placeholder="请输入密码"/>    
-        </div>  
-        <div style="margin-top:20px;text-align: center;">    
-        <input type="submit" class="mui-btn mui-btn-primary" id="loginBtn" value="登录" />    
-        &nbsp;&nbsp;<button class="mui-btn mui-btn-primary" id="regBtn">注册</button>    
-    </div>   
-     </form>    
-    </div>    
-       
-  <!--   <script>    
-     mui.init();    
-     mui.plusReady(    
-        function() {    
-           document.getElementById("loginBtn").addEventListener('tap', function(){    
-                 alert("点击了登录按钮");  
-            });   
-        }    
-      );    
-    </script>   -->
-  </body>  
- 
+		<form action="/dologin" method="post">
+			<input type="text" name="id" placeholder="请输入用户名" /><br />
+			<input type="password" name="pwd" placeholder="请输入密码" /><br />
+			<input type="submit" value="登录" />
+			
+		</form>
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--

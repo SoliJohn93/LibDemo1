@@ -15,7 +15,7 @@ public class Admins {
 	@Column
 	private String apwd;
 	@Column
-	private int state;
+	private int state=0;
 	
 	
 	public Admins() {
